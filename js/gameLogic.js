@@ -242,7 +242,8 @@ function resetGame() {
 }
 
 //  WHEN CLICKED TOGGLES THE APP'S BACKGROUND MUSIC
-// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON
+// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON, AND TEXT OFF/ON FOR MORE CLARITY IN UI
+
 const musicToggle = document.getElementById("toggleMusic");
 const musicIcon = musicToggle.querySelector("i");
 const musicText = musicToggle.querySelector(".musicText");
@@ -262,18 +263,21 @@ musicToggle.addEventListener("click", () => {
 });
 
 //  WHEN CLICKED TOGGLES WIN MUSIC ON AND OFF
-// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON
+// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON,AND TEXT OFF/ON FOR MORE CLARITY IN UI
 const winSoundToggle = document.getElementById("toggleWinSound");
 const winSoundIcon = document.getElementById("winScreenIcon");
+const winSoundText = winSoundToggle.querySelector(".musicText");
 
 if (winSoundToggle) {
 	winSoundToggle.addEventListener("click", () => {
 		if (winSound.paused) {
 			winSound.play();
+			winSoundText.textContent = "On";
 			winSoundIcon.classList.remove("fa-volume-mute");
 			winSoundIcon.classList.add("fa-volume-up");
 		} else {
 			winSound.pause();
+			winSoundText.textContent = "Off";
 			winSoundIcon.classList.remove("fa-volume-up");
 			winSoundIcon.classList.add("fa-volume-mute");
 		}
@@ -281,20 +285,23 @@ if (winSoundToggle) {
 }
 
 //  WHEN CLICKED TOGGLES LOSE MUSIC ON AND OFF
-// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON
+// UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON, AND TEXT OFF/ON FOR MORE CLARITY IN UI
 const loseSoundToggle = document.getElementById("gameOverSoundToggle");
 const loseSoundIcon = document.getElementById("loseScreenIcon");
+const loseSoundText = loseSoundToggle.querySelector(".musicText");
 
 if (loseSoundToggle) {
 	loseSoundToggle.addEventListener("click", () => {
 		if (gameOverSound.paused) {
 			gameOverSound.play();
 			gameOverBackground.play();
+			loseSoundText.textContent = "On";
 			loseSoundIcon.classList.remove("fa-volume-mute");
 			loseSoundIcon.classList.add("fa-volume-up");
 		} else {
 			gameOverSound.pause();
 			gameOverBackground.pause();
+			loseSoundText.textContent = "Off";
 			loseSoundIcon.classList.remove("fa-volume-up");
 			loseSoundIcon.classList.add("fa-volume-mute");
 		}
