@@ -1,6 +1,7 @@
 const nameBtn = document.getElementById("submitBtn");
 const startGameBtn = document.getElementById("startGameBtn");
 const alertDevName = document.getElementById("not-named-alert");
+const displayDevName = document.getElementById("dev-name");
 
 // THIS SECTION HANDLES THE 'NAME YOUR DEV' BUTTON FUNCTIONALITY
 // ON BUTTON CLCK THE NAME IS SAVED IT TO LOCAL STORAGE.
@@ -19,6 +20,7 @@ if (nameBtn) {
 			alertDevName.textContent = `You've named your Dev: ${chosenName}`;
 			alertDevName.style.color = "green";
 			alertDevName.style.marginTop = "10px";
+			displayDevName.textContent = `Hi ${chosenName}`;
 
 			setTimeout(() => {
 				alertDevName.textContent = "";
