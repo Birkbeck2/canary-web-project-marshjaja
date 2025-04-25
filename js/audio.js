@@ -10,8 +10,9 @@ const levelUpSound = new Audio("./audio/tama-powerup.wav");
 backgroundMusic.loop = true;
 backgroundMusic.volume = 1.0;
 levelUpSound.volume = 0.3;
-gameOverSound.volume = 0.3;
-gameOverBackground.volume = 0.3;
+gameOverSound.volume = 0.1;
+gameOverBackground.volume = 0.2;
+winSound.volume = 0.3;
 
 export {
 	backgroundMusic,
