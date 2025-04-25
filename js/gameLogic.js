@@ -245,14 +245,17 @@ function resetGame() {
 // UPDATES THE ICON TO SHOW MUTE OR VOLUME ICON
 const musicToggle = document.getElementById("toggleMusic");
 const musicIcon = musicToggle.querySelector("i");
+const musicText = musicToggle.querySelector(".musicText");
 
 musicToggle.addEventListener("click", () => {
 	if (backgroundMusic.paused) {
 		backgroundMusic.play();
+		musicText.textContent = "On";
 		musicIcon.classList.remove("fa-volume-mute");
 		musicIcon.classList.add("fa-volume-up");
 	} else {
 		backgroundMusic.pause();
+		musicText.textContent = "Off";
 		musicIcon.classList.remove("fa-volume-up");
 		musicIcon.classList.add("fa-volume-mute");
 	}
