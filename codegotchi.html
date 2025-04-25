@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adopt your own digital developer. Code, learn, debug, level up and keep your dev happy in this retro pixel-style Tamagotchi mini game.">
+    <title>CODEGOTCHI</title>
+
+    <!-- FAVICON ICON -->
+    <link rel="icon" type="image/png" href="./images/tamagotchi-favicon-32x.png">
+
+    <!-- EXTERNAL STYLESHEETS, FONTS, LIBRARIES  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
+    <link rel="stylesheet" href="https://unpkg.com/nes.css/css/nes.min.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    </noscript>
+
+    <!-- LOCAL STYLESHEETS -->
+    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER WITH "NAV" NA D "SETTING" OPTIONS -->
+    <header>
+        <a href="index.html" class="dev-activity backBtn" aria-label="Return to main menu">
+            <i style="margin-right: 10px;" class="fa-solid fa-chevron-left" aria-hidden="true"></i>Menu
+        </a>
+        <button id="toggleMusic" class="music-toggle" title="Pause / Play music" aria-label="Toggle background music">
+            <i class="fas fa-volume-mute" aria-hidden="true"></i>
+        </button>
+        <p class="close-btn">X</p>
+        <p class="minimize-btn">-</p>
+        <p class="fullscreen-btn">
+            <span class="p-brackets" aria-hidden="true">
+                &lt;&gt;
+            </span>
+        </p>
+    </header>
+
+    <!-- PAGE MAIN CONTENT -->
+    <main class="game-container">
+        <div id="devMessage" class="nes-balloon from-left" role="status" aria-live="polite">
+            <p></p>
+        </div>
+
+        <!-- TAMAGOTCHI CANVAS -->
+        <section class="left-panel" aria-label="Tamagotchi Canvas">
+            <h1 class="game-title">CodeGotchi</h1>
+            <canvas id="gameCanvas" width="700" height="710"></canvas>
+        </section>
+
+        <!-- RIGHT PANEL, DEV INFO AND DEV STATS -->
+        <section class="right-panel" aria-label="Dev info, game controls and stats">
+            <div>
+                <p id="dev-name"></p>
+                <p id="displayLevel">Level: 1, Junior Developer</p>
+                <!-- <p id="congratsMessage" style="font-weight: bold; margin-top: 10px;"></p> -->
+            </div>
+            <div class="right-panel-inner">
+                <!-- STATS CONTAINER -->
+                <section class="stats" aria-label="Developer stats">
+                    <!-- ENERGY STATS -->
+                    <div class="stat-group">
+                        <p>Energy:<br><span id="energy">100</span>/100</p>
+                        <div class="stat-bar" role="progressbar">
+                            <div class="stat-fill" id="energyFill"></div>
+                        </div>
+                    </div>
+
+                    <!-- KNOWLEDGE STATS -->
+                    <div class="stat-group">
+                        <p>Knowledge:<br><span id="knowledge">0</span>/100</p>
+                        <div class="stat-bar" role="progressbar">
+                            <div class="stat-fill" id="knowledgeFill"></div>
+                        </div>
+                    </div>
+
+                    <!-- MOTIVATION STATS-->
+                    <div class="stat-group">
+                        <p>Motivation:<br><span id="motivation">100</span>/100</p>
+                        <div class="stat-bar" role="progressbar">
+                            <div class="stat-fill" id="motivationFill"></div>
+                        </div>
+                    </div>
+
+                    <!-- STRESS STATS -->
+                    <div class="stat-group">
+                        <p>Stress:<br><span id="stress">0</span>/100</p>
+                        <div class="stat-bar" role="progressbar">
+                            <div class="stat-fill" id="stressFill"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- BUTTON CONTAINER -->
+                <section class="button-container" aria-label="Game/Dev actions button">
+                    <button class="dev-activity" id="code">Code</button>
+                    <button class="dev-activity" id="study">Study</button>
+                    <button class="dev-activity" id="debug">Debug</button>
+                    <button class="dev-activity" id="sleep">Sleep</button>
+                    <button class="dev-activity" id="break">Take a break!</button>
+                    <button class="dev-activity" id="freeTime">Free time</button>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- WIN SCREEN -->
+    <section id="finalScreen" style="display: none;" class="final-message-screen" aria-label="Victory screen">
+        <img class="winner-image" src="./images/winner-gif-loop-3.gif" width="630" height="630" alt="Win Screen">
+        <h1 id="congratsMessage">Your Dev has reached their form: Head of Software!</h1>
+        <button id="resetButton" class="dev-activity">Play Again</button>
+        <button id="toggleWinSound" class="music-toggle" aria-label="Toggle win sound">
+            <i id="winScreenIcon" class="fas fa-volume-mute"></i>
+        </button>
+
+    </section>
+
+    <!-- GAME OVER SCREEN -->
+    <section id="gameOverScreen" style="display: none;" class="final-message-screen" aria-label="Game over screen">
+        <img class="winner-image" src="./images/loser-gif-loop-3.gif" width="700" height="700" alt="Game Over Screen">
+        <h1 id="gameOverMessage">Game Over</h1>
+        <button id="tryAgainButton" class="dev-activity">Try Again</button>
+        <button id="gameOverSoundToggle" class="music-toggle" aria-label="Toggle Game Over sound">
+            <i id="loseScreenIcon" class="fas fa-volume-mute"></i>
+        </button>
+    </section>
+
+    <!-- SCRIPTS IMPORTS -->
+    <script src=" ./js/start-screen.js"></script>
+    <script type="module" src="./js/gameLogic.js"></script>
+    <script type="module" src="./js/spriteAnimation.js"></script>
+    <script type="module" src="./js/audio.js"></script>
+    <script type="module" src="./js/gameActivities.js"></script>
+</body>
+
+</html>
