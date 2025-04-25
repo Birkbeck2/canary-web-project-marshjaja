@@ -37,7 +37,8 @@
             <h1 class="game-title">CodeGotchi</h1>
             <form aria-label="Enter your developer name">
                 <label for="userInput">Your name</label>
-                <input type="text" id="userInput" class="nes-input" name="dev-name" aria-describedby="not-named-alert">
+                <input type="text" id="userInput" class="nes-input" name="dev-name" placeholder="Enter a name"
+                    minlength="4" maxlength="14" aria-describedby="not-named-alert">
                 <p style="margin-top: 20px;" id="dev-name"></p>
                 <p id="not-named-alert" role="alert"></p>
                 <button class="dev-activity" id="submitBtn" style="margin-top: 30px;">Name</button>
