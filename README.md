@@ -41,21 +41,22 @@
 
 ## Table of Contents
 
+- [Description](#description)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-starting)
+- [Installation](#installation)
+- [Project Improvements](#project-improvements)
+- [Contributors](#contributors)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
+- [License](#license)
 
-  - [Description](#description)
-  - [Technologies Used](#technologies-used)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Contributors](#contributors)
-  - [Acknowledgments](#acknowledgments)
-  - [Contact](#contact)
-  - [License](#license)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ---
 
-# 📖DESCRIPTION 
+## Description 
 This project was created as the final submission for my coursework in the Visual Design and Web Project module at Birkbeck, University of London.<br>
 CodeGotchi is a browser-based pixel art Tamagotchi-style game where users interact with a virtual developer character, helping them level up by managing stats such as Energy, Knowledge, Motivation, and Stress.<br> Built with JavaScript, HTML, and CSS, the project demonstrates the use of variables, functions, arrays, conditional logic, and DOM manipulation. <br>
 The game features interactive user inputs, dynamic stat updates, and persistent data storage using localStorage, creating a playful and responsive user experience.
@@ -66,7 +67,7 @@ The game features interactive user inputs, dynamic stat updates, and persistent 
 
 ---
 
-# 🚧👷‍♀️PROJECT IMPROVEMENTS:
+## 🚧👷‍♀️PROJECT IMPROVEMENTS:
 
 - Character Customisation: Allow users to create or select a developer avatar using the DiceBear API.
 - Centralised Audio Management: Improve sound handling by managing audio centrally across components.
@@ -76,7 +77,7 @@ The game features interactive user inputs, dynamic stat updates, and persistent 
 
 ---
 
-# ❗GETTING STARTED
+##❗GETTING STARTED
 
 1. Clone the repo
    ```sh
@@ -87,7 +88,7 @@ The game features interactive user inputs, dynamic stat updates, and persistent 
 3. Open the `index.html` file in your web browser to view the project.
 ---
 
-# ⚙️INSTALLATION
+## ⚙️INSTALLATION
 No installation is required. Simply clone the repository, navigate to the project directory, and open the `index.html` file in your web browser to start using the project.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -95,7 +96,7 @@ No installation is required. Simply clone the repository, navigate to the projec
 ---
 
 
-# 📶TECHNOLOGIES USED
+## 📶TECHNOLOGIES USED
 This project was built using the following technologies and tools:
 
 - HTML: Semantic HTML5 was used to structure the website and to ensure accessibility.
@@ -132,7 +133,7 @@ I would like to thank the following for their contributions and support in creat
 - Classmates and Friends: For their encouragement, feedback, user testing and helpful suggestions.
 ---
 
-## 📞Contact
+## Contact
 
 For more information or inquiries about the project, feel free to contact me:<br>
 [GitHub: marshjaja](https://github.com/marshjaja)<br>
