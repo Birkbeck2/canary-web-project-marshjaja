@@ -85,6 +85,10 @@ canvas {
 #dev-name {
 	font-size: 28px;
 }
+#userInput {
+	padding: 15px;
+	box-shadow: 4px 4px 0 var(--color-black) !important;
+}
 
 .stats {
 	display: flex;
@@ -197,7 +201,6 @@ startGameBtn {
 	height: 32px;
 	background-color: var(--color-red);
 	border: 2px dotted var(--color-black);
-	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -210,7 +213,6 @@ startGameBtn {
 	height: 32px;
 	background-color: yellow;
 	border: 2px dotted var(--color-black);
-	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -223,7 +225,6 @@ startGameBtn {
 	height: 32px;
 	background-color: var(--stats-green);
 	border: 2px dotted var(--color-black);
-	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -236,7 +237,6 @@ startGameBtn {
 	position: absolute;
 	margin: 30px;
 	right: 10px;
-	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -260,7 +260,6 @@ a:hover {
 	right: 10px;
 	background: none;
 	border: none;
-	cursor: pointer;
 	font-size: 32px;
 	display: flex;
 	flex-direction: column;
