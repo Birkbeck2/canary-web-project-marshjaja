@@ -1,24 +1,19 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0rp-bx3r)
 
-
-
-
 <a name="top"></a>
 
 <div align="center">
 
 # ![Screenshot 2024-12-03 at 15 43 03](https://github.com/user-attachments/assets/5074d260-f9be-4d1a-8ece-be026b7b0695)  <br/> Final Submission - Web Project
 
- 
 ####
- <br> This project was created as part of my coursework at Birkbeck to develop a fully realised web project, connecting visual design with coding practice using JavaScript, HTML, and CSS, and applying concepts learned in the Visual Design and Web Project module.
+ This project was created as part of my coursework at Birkbeck to develop a fully realised web project, connecting visual design with coding practice using JavaScript, HTML, and CSS, and applying concepts learned in the Visual Design and Web Project module.
 
 
  <a href="https://crispy-adventure-2n2ggk2.pages.github.io/">
  </a>
  
   ## <a href="https://crispy-adventure-2n2ggk2.pages.github.io/">View Deployment Link</a>
-
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Birkbeck2/canary-web-project-marshjaja?style=for-the-badge&logoColor=white)
 <p align="center">
@@ -28,14 +23,11 @@
 <img src="https://img.shields.io/github/commit-activity/m/Birkbeck2/canary-web-project-marshjaja?style=for-the-badge&color=efc8d4" alt="GitHub commit activity" />
 <img src="https://img.shields.io/github/languages/top/Birkbeck2/canary-web-project-marshjaja?style=for-the-badge&color=efc8d4" alt="GitHub top language" />
 
-
   </p>
 
 </div>
 
 ---
-
-
 
 # 🏗️BUILT WITH
   
@@ -44,8 +36,6 @@
 ![CSS3](https://img.shields.io/badge/css-216CAF?style=for-the-badge&logo=css3&logoColor=216CAF&labelColor=grey)
 ![NES](https://img.shields.io/badge/NES.CSS-d9d8d8?style=for-the-badge&logo=NES&logoColor=d9d8d8&labelColor=grey)
 ![Fontawesome](https://img.shields.io/badge/fontawesome-216CAF?style=for-the-badge&logo=fontawesome3&logoColor=216CAF&labelColor=grey)
-
-
 
 ---
 
@@ -66,8 +56,9 @@
 ---
 
 # 📖DESCRIPTION 
-This project was created as the final submission for my coursework in the Visual Design and Web Project module at Birkbeck, University of London.
-CodeGotchi is a browser-based pixel art Tamagotchi-style game where users interact with a virtual developer character, helping them level up by managing stats such as Energy, Knowledge, Motivation, and Stress. Built with JavaScript, HTML, and CSS, the project demonstrates the use of variables, functions, arrays, conditional logic, and DOM manipulation. The game features interactive user inputs, dynamic stat updates, and persistent data storage using localStorage, creating a playful and responsive user experience.
+This project was created as the final submission for my coursework in the Visual Design and Web Project module at Birkbeck, University of London.<br>
+CodeGotchi is a browser-based pixel art Tamagotchi-style game where users interact with a virtual developer character, helping them level up by managing stats such as Energy, Knowledge, Motivation, and Stress.<br> Built with JavaScript, HTML, and CSS, the project demonstrates the use of variables, functions, arrays, conditional logic, and DOM manipulation. <br>
+The game features interactive user inputs, dynamic stat updates, and persistent data storage using localStorage, creating a playful and responsive user experience.
 
 ---
 
@@ -139,9 +130,6 @@ I would like to thank the following for their contributions and support in creat
 - Validation Tools: WAVE, Lighthouse, and HTML validation tools for ensuring accessibility and responsiveness.
 - GitHub: For hosting this project and enabling version control.
 - Classmates and Friends: For their encouragement, feedback, user testing and helpful suggestions.
-
-
-
 ---
 
 ## 📞Contact
