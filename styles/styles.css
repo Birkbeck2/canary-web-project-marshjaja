@@ -1,0 +1,306 @@
+/* MAIN PAGE STYLES */
+:root {
+	--color-black: #000;
+	--bg-color: #fff;
+	--color-light-gray: #d9d8d8;
+	--stats-orange: orange;
+	--stats-green: limegreen;
+	--button-color: #ffe055;
+	--button-border-color: #f9a201;
+	--color-red: #ff0000;
+}
+[data-theme="dark"] {
+	--color-black: #fff;
+	--bg-color: #000;
+	--button-color: #a18aff;
+}
+
+body {
+	font-family: "Press Start 2P", system-ui;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+p {
+	margin: 0;
+}
+form {
+	display: block;
+}
+
+canvas {
+	image-rendering: pixelated;
+}
+/* CODEGOTCHI PAGE STYLES */
+.game-title {
+	font-size: 40px;
+	margin-top: 20px;
+}
+.game-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: start;
+	justify-content: center;
+	margin: 0 15px 0 15px;
+	gap: 40px;
+	padding: 10px;
+	border: 5px solid var(--color-black);
+	box-shadow: 6px 6px 0 var(--color-black) !important;
+}
+.left-panel {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.right-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	margin-top: 145px;
+	gap: 20px;
+	text-align: left;
+}
+.right-panel-inner {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: start;
+	gap: 40px;
+}
+
+#devMessage {
+	position: absolute;
+	top: 210px;
+	left: 30%;
+	z-index: 10;
+	max-width: 220px;
+	display: none;
+	pointer-events: none;
+}
+
+#dev-name {
+	font-size: 28px;
+}
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+}
+.stat-group {
+	text-wrap: nowrap;
+}
+
+.stat-bar {
+	width: 200px;
+	height: 30px;
+	background-color: var(--color-light-gray);
+	border: 2px dotted var(--color-black);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.stat-fill {
+	height: 100%;
+	width: 0%;
+	transition: width 0.3s ease;
+}
+
+.stat-fill.low {
+	background-color: var(--color-red);
+}
+
+.stat-fill.medium {
+	background-color: var(--stats-orange);
+}
+
+.stat-fill.high {
+	background-color: var(--stats-green);
+}
+
+/* BUTTON STYLES BASED ON THE NES.CSS BUTTON */
+.button-container {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 12px;
+	justify-content: center;
+	margin-top: 20px;
+}
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.dev-activity,
+startGameBtn {
+	background-color: var(--button-color);
+	border-right: 6px solid var(--button-border-color);
+	border-bottom: 6px solid var(--button-border-color);
+	box-shadow: 4px 4px 0 var(--color-black), 0 0 0 2px var(--color-black);
+	font-family: "Press Start 2P", monospace;
+	color: var(--color-black);
+	padding: 12px 20px;
+	transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out,
+		box-shadow 0.1s ease-in-out;
+}
+
+.dev-activity:hover {
+	transform: scale(1.03);
+	filter: brightness(1.03);
+	/* box-shadow: none; */
+	box-shadow: 1px 1px 0 var(--color-black), 0 0 0 1px var(--color-black);
+}
+.dev-activity:active,
+.dev-activity:focus {
+	transform: scale(1.03);
+}
+a {
+	color: var(--color-black);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--color-black);
+	text-decoration: none;
+}
+.nes-field {
+	margin: 30px 0;
+}
+.music-toggle {
+	position: absolute;
+	margin: 30px;
+	top: 60px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 32px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	opacity: 1;
+	transition: transform 0.2s ease-in-out;
+	z-index: 10;
+}
+.music-toggle:hover {
+	transform: scale(1.2);
+	opacity: 0.5;
+}
+/* WIN/LOSE SCREEN STYLES */
+.final-message-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--bg-color);
+	color: var(--color-black);
+	z-index: 9999;
+	font-family: "Press Start 2P", monospace;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.winner-image {
+	width: 60vw;
+	max-width: 680px;
+	height: auto;
+}
+
+#resetButton,
+#tryAgainButton {
+	margin: 20px;
+}
+
+/* START SCREEN STYLES */
+.start-screen {
+	width: 100vw;
+	height: 100vh;
+	color: var(--color-black);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	font-family: "Press Start 2P", monospace;
+	background-image: url("../images/purple-wave-background.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.start-screen-container {
+	background-color: var(--bg-color);
+	padding: 50px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#userInput {
+	padding: 15px;
+	box-shadow: 4px 4px 0 var(--color-black) !important;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* FAKE WINDOW TAB STYLES */
+.close-btn {
+	position: absolute;
+	margin: 20px;
+	left: 20px;
+	width: 32px;
+	height: 32px;
+	background-color: var(--color-red);
+	border: 2px dotted var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.minimize-btn {
+	position: absolute;
+	margin: 20px;
+	left: 60px;
+	width: 32px;
+	height: 32px;
+	background-color: yellow;
+	border: 2px dotted var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fullscreen-btn {
+	position: absolute;
+	margin: 20px;
+	left: 100px;
+	width: 32px;
+	height: 32px;
+	background-color: var(--stats-green);
+	border: 2px dotted var(--color-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.p-brackets {
+	transform: rotate(45deg) translateY(2px) translateX(2px);
+}
+.backBtn {
+	color: var(--color-black);
+	position: absolute;
+	margin: 30px;
+	right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
